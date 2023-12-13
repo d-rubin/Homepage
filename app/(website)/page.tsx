@@ -1,3 +1,5 @@
-const Homepage = () => {};
+const Homepage = () => {
+  return <div className="pt-32"></div>;
+};
 
 export default Homepage;
