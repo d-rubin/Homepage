@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 
-const inter = Poppins({ weight: "500", subsets: ["latin"] });
+const inter = Poppins({ weight: "300", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
