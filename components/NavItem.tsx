@@ -1,12 +1,18 @@
-const NavItem = ({ text }: { text: string }) => {
-    const href = `#${text.replace(" ", "-")}`;
+import Link from "next/link";
+import { generateHref } from "@/utils/helper";
 
-    return (
-        <span className="group">
-            <a className="outline-none text-2xl group-hover:text-orange group-focus-within:text-orange transition-all" href={href}>{text}</a>
-            <div className="w-14 border-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
-        </span>
-    );
-}
+const NavItem = ({ text }: { text: string }) => {
+  return (
+    <span className="group">
+      <Link
+        className="outline-none text-2xl group-hover:text-orange group-focus-within:text-orange transition-all"
+        href={generateHref(text)}
+      >
+        {text}
+      </Link>
+      <div className="w-14 border-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
+    </span>
+  );
+};
 
 export default NavItem;
