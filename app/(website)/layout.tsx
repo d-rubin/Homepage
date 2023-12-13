@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="max-w-screen-lg mx-auto">
       <Header />
-      {children}
+      <main className="pt-20">{children}</main>
       <Footer />
     </div>
   );

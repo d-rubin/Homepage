@@ -29,8 +29,7 @@ const BurgerMenu = () => {
       </div>
       <div
         className={clsx(
-          // Todo: Adjust bg-opacity when page has content
-          "bg-transparent sm:hidden bg-opacity-50 top-20 fixed right-0 bottom-0 transition-all flex items-center justify-center overflow-hidden",
+          "bg-[#414856] sm:hidden bg-opacity-50 top-20 fixed right-0 bottom-0 transition-all flex items-center justify-center overflow-hidden",
           isOpen ? "w-full" : "w-0"
         )}
       >
