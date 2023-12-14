@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="px-4 flex flex-col gap-8 relative overflow-hidden lg:overflow-visible">
+    <div className="px-4 flex flex-col gap-8 relative overflow-visible">
       <Image
         src={skillsBackgroundImg}
         alt="Skills Background"
@@ -18,7 +18,8 @@ const Skills = () => {
         in-house UI library.
       </p>
       <p className="text-end text-lg">
-        I also have experience with Git, SCSS, SQL, Python, Django & Scrum.
+        I also have experience with Tailwind, Git, SCSS, SQL, Python, Django &
+        Scrum.
       </p>
       <p className="text-end text-lg">
         Of course, the basics with JavaScript, HTML & CSS should not be missing.

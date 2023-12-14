@@ -29,17 +29,16 @@ const Intro = () => {
             className="md:hidden object-contain absolute -bottom-20 sm:-bottom-32 md:-bottom-80"
           />
         </div>
-        {/*<h2 id="about-me" className="invisible" />*/}
-        <div className="flex flex-col items-center gap-4 md:w-3/5">
-          <div className="flex items-center justify-center z-10">
-            <p className="-rotate-90 h-fit text-3xl text-end md:text-3xl md:text-4xl">
+        <div className="flex flex-col items-center gap-4 md:w-3/5 z-10">
+          <div className="flex items-center justify-center cursor-default">
+            <p className="-rotate-90 h-fit text-3xl text-end md:text-4xl">
               I am
             </p>
             <span className="flex flex-col gap-2">
-              <p className="text-4xl font-extrabold md:text-4xl md:text-5xl">
+              <p className="text-4xl font-extrabold md:text-5xl">
                 Daniel Rubin
               </p>
-              <p className="text-2xl text-red md:text-2xl md:text-3xl">
+              <p className="text-2xl text-red md:text-3xl">
                 FRONTEND DEVELOPER
               </p>
             </span>
@@ -58,7 +57,7 @@ const Intro = () => {
         />
       </div>
       <div className="w-full flex items-center justify-center relative md:justify-start">
-        <div className="absolute left-0 w-1/5 border-t-2 md:border-t-4 rounded border-red sm:w-48 md:w-40" />
+        <div className="absolute left-0 w-1/5 border-t-4 rounded border-red sm:w-48 md:w-40" />
         <SocialIcons className="md:ml-50" />
         <span className="group hidden md:block ml-10">
           <Link
