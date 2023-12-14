@@ -17,7 +17,7 @@ const BurgerMenu = () => {
   return (
     <>
       <div
-        className="sm:hidden cursor-pointer group outline-none"
+        className="md:hidden block cursor-pointer group outline-none"
         tabIndex={0}
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={handleKeyDown}
@@ -29,7 +29,7 @@ const BurgerMenu = () => {
       </div>
       <div
         className={clsx(
-          "bg-[#414856] sm:hidden bg-opacity-50 top-20 fixed right-0 bottom-0 transition-all flex items-center justify-center overflow-hidden",
+          "bg-[#414856] md:hidden bg-opacity-75 top-20 fixed right-0 bottom-0 transition-all flex items-center justify-center overflow-hidden",
           isOpen ? "w-full" : "w-0"
         )}
       >

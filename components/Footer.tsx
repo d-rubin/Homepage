@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-t-orange flex flex-col sm:flex-row sm:h-20 justify-between gap-6 items-center p-4">
+    <footer className="border-t-2 border-t-orange flex flex-col md:flex-row md:h-20 justify-between gap-6 items-center p-4">
       <p className="cursor-default text-2xl">© Daniel Rubin 2022</p>
       <SocialIcons />
       <div className="group">
