@@ -4,7 +4,7 @@ import githubIcon from "@/public/github.svg";
 import linkedInIcon from "@/public/linkedIn.svg";
 import emailIcon from "@/public/email.svg";
 import clsx from "clsx";
-import Icon from "@/components/Icon";
+
 const SocialIcons = ({ className }: { className?: string }) => {
   return (
     <div className={clsx("flex gap-10", className)}>

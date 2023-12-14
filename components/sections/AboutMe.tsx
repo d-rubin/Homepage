@@ -16,9 +16,11 @@ const AboutMe = () => {
           About me
         </h2>
         <p className="text-lg">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           Hi, I'm a German frontend developer with experience in developing and
           testing responsive web apps and components with Next.js, React &
           Storybook. Feel free to check out my portfolio with examples of
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           projects, that I've developed for myself.
         </p>
         <span className="flex gap-8 items-center">
@@ -27,6 +29,7 @@ const AboutMe = () => {
             className="fill-none w-20 h-20 aspect-1/1 flex-grow"
           />
           <p className="text-lg flex-shrink w-fit">
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             As a part-time freelancer, I'm actively looking for exciting new
             projects where I can contribute my skills and achieve great results
             together with you.
@@ -37,6 +40,7 @@ const AboutMe = () => {
           <p className="text-lg flex-shrink w-fit">
             If you are looking for an experienced and motivated developer who
             has a knack for turning designs into code, then get in touch with me
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             and let's talk about your project.
           </p>
         </span>
