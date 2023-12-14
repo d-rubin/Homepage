@@ -1,73 +1,53 @@
-import Image from "next/image";
-import introBackground from "@/public/intro-background.svg";
-import introImage from "@/public/intro-image.png";
-import introSeparator from "@/public/intro-separator.svg";
-import LinkButton from "@/components/LinkButton";
-import SocialIcons from "@/components/SocialIcons";
 import Icon from "@/components/Icon";
+import Image from "next/image";
+import aboutMeBackgroundImg from "@/public/about-me-background.svg";
+import aboutMeImg from "@/public/about-me-img.jpg";
 
 const AboutMe = () => {
   return (
-    <>
-      <div className="flex flex-col gap-1 mb-8 md:flex-row items-center relative">
-        <div className="relative flex items-center justify-center overflow-hidden sm:overflow-visible w-full md:w-2/5">
-          <Image
-            src={introBackground}
-            alt="Background Image"
-            fill
-            className="-z-20 md:scale-150"
-          />
-          <Image
-            src={introImage}
-            alt="Introduction Image"
-            className="object-cover -z-10"
-          />
-          <Image
-            src={introSeparator}
-            alt="Introduction Separator"
-            className="md:hidden object-contain absolute -bottom-20 sm:-bottom-32 md:-bottom-80"
-          />
-        </div>
-        {/*<h2 id="about-me" className="invisible" />*/}
-        <div className="flex flex-col items-center gap-4 md:w-3/5">
-          <div className="flex items-center justify-center z-10">
-            <p className="-rotate-90 h-fit text-3xl text-end md:text-3xl md:text-4xl">
-              I am
-            </p>
-            <span className="flex flex-col gap-2">
-              <p className="text-4xl font-extrabold md:text-4xl md:text-5xl">
-                Daniel Rubin
-              </p>
-              <p className="text-2xl text-red md:text-2xl md:text-3xl">
-                FRONTEND DEVELOPER
-              </p>
-            </span>
-          </div>
-          <LinkButton
-            label="Let's talk!"
-            href="#contact"
-            variant="default"
-            color="orange"
-          />
-        </div>
-        <Image
-          src={introSeparator}
-          alt="Introduction Separator"
-          className="hidden md:block object-contain absolute md:-bottom-90"
-        />
-      </div>
-      <div className="w-full flex items-center justify-center relative md:justify-start">
-        <div className="absolute left-0 w-1/5 border-t-2 md:border-t-4 rounded border-red sm:w-48 md:w-40" />
-        <SocialIcons className="md:ml-50" />
-        <span className="hidden absolute gap-4 items-center justify-center rotate-90 right-0 bottom-16 md:flex">
-          <p className="cursor-default">Scroll down</p>
+    <div className="z-10 flex gap-8 items-center relative w-full overflow-visible">
+      <Image
+        src={aboutMeBackgroundImg}
+        alt="About me background"
+        className="absolute object-cover top-20 -right-40 opacity-40 sm:-right-60 sm:scale-75 sm:-top-32"
+      />
+      <div className="flex pl-4 flex-col gap-8 lg:w-1/2">
+        <h2 id="about-me" className="text-5xl font-extrabold">
+          About me
+        </h2>
+        <p className="text-lg">
+          Hi, I'm a German frontend developer with experience in developing and
+          testing responsive web apps and components with Next.js, React &
+          Storybook. Feel free to check out my portfolio with examples of
+          projects, that I've developed for myself.
+        </p>
+        <span className="flex gap-8 items-center">
           <Icon
-            icon="arrowDown"
-            className="stroke-white -rotate-90 fill-white"
+            icon="lightBulb"
+            className="fill-none w-20 h-20 aspect-1/1 flex-grow"
           />
+          <p className="text-lg flex-shrink w-fit">
+            As a part-time freelancer, I'm actively looking for exciting new
+            projects where I can contribute my skills and achieve great results
+            together with you.
+          </p>
+        </span>
+        <span className="flex gap-6 items-center">
+          <Icon icon="puzzle" className="fill-orange w-24 h-24 flex-grow" />
+          <p className="text-lg flex-shrink w-fit">
+            If you are looking for an experienced and motivated developer who
+            has a knack for turning designs into code, then get in touch with me
+            and let's talk about your project.
+          </p>
         </span>
       </div>
-    </>
+      <div className="w-1/2 hidden lg:flex items-center justify-end pr-20">
+        <div className="relative rounded-full h-96 w-96 overflow-hidden border-4 border-orange">
+          <Image src={aboutMeImg} fill alt="About me Image" />
+        </div>
+        <div className="absolute right-0 border-t-orange border-t-4 rounded-tr rounded-br w-20" />
+      </div>
+    </div>
   );
 };
 

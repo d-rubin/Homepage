@@ -13,6 +13,7 @@ const LinkButton = ({
   color: "red" | "orange";
 }) => {
   return (
+    // Todo: Add hover and focus style + outline
     <Link
       href={href}
       className={clsx(
