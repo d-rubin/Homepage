@@ -1,12 +1,14 @@
 import Intro from "@/components/sections/Intro";
 import AboutMe from "@/components/sections/AboutMe";
+import Skills from "@/components/sections/Skills";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <>
       <Intro />
       <AboutMe />
-    </div>
+      <Skills />
+    </>
   );
 };
 

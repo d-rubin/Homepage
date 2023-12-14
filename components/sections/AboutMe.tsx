@@ -11,7 +11,7 @@ const AboutMe = () => {
         alt="About me background"
         className="absolute object-cover top-20 -right-40 opacity-40 sm:-right-60 sm:scale-75 sm:-top-32"
       />
-      <div className="flex pl-4 flex-col gap-8 lg:w-1/2">
+      <div className="flex pl-4 pr-4 lg:pr-0 flex-col gap-8 lg:w-1/2">
         <h2 id="about-me" className="text-5xl font-extrabold">
           About me
         </h2>
