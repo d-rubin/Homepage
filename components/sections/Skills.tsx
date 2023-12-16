@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="px-4 flex flex-col gap-8 relative overflow-visible">
+    <div className="px-4 flex flex-col gap-8 relative overflow-visible cursor-default">
       <Image
         src={skillsBackgroundImg}
         alt="Skills Background"

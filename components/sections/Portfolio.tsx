@@ -5,8 +5,8 @@ import LinkButton from "@/components/LinkButton";
 
 const Portfolio = () => {
   return (
-    <div className="flex flex-col gap-8 z-10">
-      <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-10 z-10 cursor-default">
+      <div className="flex flex-col gap-8 items-center">
         <div className="w-full flex items-center justify-center relative">
           <div className="w-full flex items-center justify-end">
             <div className="rounded border-t-4 border-red w-full lg:w-20" />
@@ -27,7 +27,7 @@ const Portfolio = () => {
           alt="Laptop with Image of join"
           className="max-w-md w-full md:w-80"
         />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8">
           <h3 className="text-4xl text-red font-extrabold text-center">Join</h3>
           <p className="text-2xl text-orange text-center">
             Next.js | TypeScript | Server-actions | Tailwind | Python | Django |
@@ -53,7 +53,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 px-4 items-center">
+      <div className="flex flex-col md:flex-row gap-8 px-4 items-center">
         <div className="flex flex-col gap-4">
           <h3 className="text-4xl text-red font-extrabold text-center">
             Sharky
