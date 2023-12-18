@@ -145,14 +145,15 @@ const ContactForm = () => {
         </span>
         <span className="flex gap-4 items-start">
           <span className="group">
-            <Image
-              src={checked ? checkedImg : uncheckedImg}
-              alt="Checkbox"
-              width={40}
-              height={40}
-              className="hover:cursor-pointer mt-1 transition-all outline-none group-focus-within:scale-125"
-              onClick={handleClick}
-            />
+            <span className="h-5 w-5 relative block">
+              <Image
+                src={checked ? checkedImg : uncheckedImg}
+                alt="Checkbox"
+                fill
+                className="hover:cursor-pointer mt-1 transition-all outline-none group-focus-within:scale-125"
+                onClick={handleClick}
+              />
+            </span>
             <input
               {...register("privacy")}
               checked={checked}

@@ -34,10 +34,10 @@ const BurgerMenu = () => {
         )}
       >
         <div className="flex flex-col gap-4 text-center text-2xl h-3/5">
-          <DrawerItem text="About me" />
-          <DrawerItem text="Skills" />
-          <DrawerItem text="Portfolio" />
-          <DrawerItem text="Contact" />
+          <DrawerItem text="About me" onClick={setIsOpen} />
+          <DrawerItem text="Skills" onClick={setIsOpen} />
+          <DrawerItem text="Portfolio" onClick={setIsOpen} />
+          <DrawerItem text="Contact" onClick={setIsOpen} />
         </div>
       </div>
     </>

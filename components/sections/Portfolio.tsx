@@ -11,9 +11,7 @@ const Portfolio = () => {
           <div className="w-full flex items-center justify-end">
             <div className="rounded border-t-4 border-red w-full lg:w-20" />
           </div>
-          <h2 id="skills" className="text-5xl font-extrabold w-fit px-8">
-            Portfolio
-          </h2>
+          <h2 className="text-5xl font-extrabold w-fit px-8">Portfolio</h2>
           <div className="rounded w-full border-t-4 border-red" />
         </div>
         <p className="text-lg text-center w-full lg:w-1/2 px-4">
