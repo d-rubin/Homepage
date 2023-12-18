@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Notification = ({ trigger }: { trigger: boolean }) => {
   const [bottom, setBottom] = useState("-200px");
