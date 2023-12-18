@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 
 const Notification = ({ trigger }: { trigger: boolean }) => {
   const [bottom, setBottom] = useState("-200px");
-  const div: HTMLDivElement | null = document.querySelector("notification");
 
   useEffect(() => {
     if (trigger) {
