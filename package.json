@@ -10,16 +10,23 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
+    "@react-email/container": "0.0.11",
+    "@react-email/html": "0.0.7",
+    "@react-email/section": "0.0.11",
+    "@react-email/text": "0.0.7",
     "clsx": "^2.0.0",
     "next": "14.0.4",
+    "nodemailer": "^6.9.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "1.10.0",
     "react-hook-form": "^7.49.2",
     "tailwind-merge": "^2.1.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
