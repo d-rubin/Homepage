@@ -18,8 +18,7 @@ const AboutMe = () => {
           Hi, I'm a German frontend developer with experience in developing and
           testing responsive web apps and components with Next.js, React &
           Storybook. Feel free to check out my portfolio with examples of
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          projects, that I've developed for myself.
+          projects, that I&apos;ve developed for myself.
         </p>
         <span className="flex gap-8 items-center">
           <Icon
