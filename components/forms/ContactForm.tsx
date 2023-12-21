@@ -12,7 +12,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Notification from "@/components/Notification";
 import { sendEmail } from "@/lib/email";
-import { NextResponse } from "next/server";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Your name is required"),
