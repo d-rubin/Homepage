@@ -11,6 +11,8 @@ import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Notification from "@/components/Notification";
+import { sendEmail } from "@/lib/email";
+import { NextResponse } from "next/server";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Your name is required"),
@@ -54,10 +56,6 @@ const ContactForm = () => {
   const onSubmit = async (fieldValues: FieldValues) => {
     if (!checked) setPrivacyError(true);
     else {
-      // const updatedFieldValues = {
-      //   ...fieldValues.data,
-      //   ...{ privacy: checked },
-      // };
       const valid = contactSchema.safeParse(fieldValues);
 
       if (!valid.success) {
@@ -68,11 +66,16 @@ const ContactForm = () => {
         if (error["message"])
           setError("message", { message: error["message"] });
       } else {
-        fetch("api/send-mail", {
-          method: "POST",
-          body: JSON.stringify(valid.data),
-        });
-        handleTrigger();
+        try {
+          await sendEmail({
+            from: valid.data.email,
+            subject: `New Project request from ${valid.data.name}`,
+            html: valid.data.message,
+          });
+          handleTrigger();
+        } catch (err) {
+          console.error("Error while sending email", err);
+        }
         reset();
       }
       buttonRef.current?.blur();
