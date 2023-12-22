@@ -1,7 +1,6 @@
 import Icon from "@/components/Icon";
 import Image from "next/image";
 import aboutMeBackgroundImg from "@/public/about-me-background.svg";
-import aboutMeImg from "@/public/about-me-img.jpg";
 
 const AboutMe = () => {
   return (
