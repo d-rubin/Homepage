@@ -11,7 +11,6 @@ import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Notification from "@/components/Notification";
-import { sendEmail } from "@/lib/email";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Your name is required"),
@@ -26,7 +25,7 @@ const contactSchema = z.object({
 const ContactForm = () => {
   const {
     register,
-    formState: { isSubmitting, isValid, errors },
+    formState: { isSubmitting, errors },
     handleSubmit,
     reset,
     setError,
