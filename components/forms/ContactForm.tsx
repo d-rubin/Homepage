@@ -69,6 +69,7 @@ const ContactForm = () => {
           body: JSON.stringify(valid.data),
         });
         if (response.status === 200) handleTrigger();
+        else console.error(response);
         reset();
       }
       buttonRef.current?.blur();
