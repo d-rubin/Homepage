@@ -19,6 +19,18 @@ export async function POST(req: NextRequest) {
     const body: { name: string; email: string; message: string } =
       await req.json();
 
+    await new Promise((resolve, reject) => {
+      transporter.verify((error: Error | null, success: boolean) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log("Server is ready to take our messages");
+          resolve(success);
+        }
+      });
+    });
+
     const mailData = {
       from: body.email,
       to: process.env.SMTP_TO_EMAIL,
@@ -27,13 +39,20 @@ export async function POST(req: NextRequest) {
       html: body.message,
     };
 
-    transporter.sendMail(
-      mailData,
-      (err: Error | null, info: SMTPTransport.SentMessageInfo) => {
-        if (err) console.log(err);
-        else console.log(info);
-      }
-    );
+    await new Promise(async (resolve, reject) => {
+      await transporter.sendMail(
+        mailData,
+        (err: Error | null, info: SMTPTransport.SentMessageInfo) => {
+          if (err) {
+            console.log(err);
+            reject(err);
+          } else {
+            console.log(info);
+            resolve(info);
+          }
+        }
+      );
+    });
 
     return NextResponse.json(
       { message: "Email sent successfully" },
