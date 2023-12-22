@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT!) || 25,
-    secure: true,
+    secure: false,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
@@ -35,7 +35,11 @@ export async function POST(req: NextRequest) {
       }
     );
     console.log(
-      `From: ${body.email}\nTo: ${process.env.SMTP_TO_EMAIL}\nUser: ${process.env.SMTP_USER}\nPW: ${process.env.SMTP_PASSWORD}`
+      `From: ${body.email}\nTo: ${process.env.SMTP_TO_EMAIL}\nUser: ${
+        process.env.SMTP_USER
+      }\nPW: ${process.env.SMTP_PASSWORD}\nHost: ${
+        process.env.SMTP_HOST
+      }\n Port: ${parseInt(process.env.SMTP_PORT!) || 25}`
     );
 
     return NextResponse.json(
