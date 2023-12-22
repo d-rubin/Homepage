@@ -34,13 +34,6 @@ export async function POST(req: NextRequest) {
         else console.log(info);
       }
     );
-    console.log(
-      `From: ${body.email}\nTo: ${process.env.SMTP_TO_EMAIL}\nUser: ${
-        process.env.SMTP_USER
-      }\nPW: ${process.env.SMTP_PASSWORD}\nHost: ${
-        process.env.SMTP_HOST
-      }\n Port: ${parseInt(process.env.SMTP_PORT!) || 25}`
-    );
 
     return NextResponse.json(
       { message: "Email sent successfully" },
