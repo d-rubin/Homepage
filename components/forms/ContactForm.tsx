@@ -65,16 +65,11 @@ const ContactForm = () => {
         if (error["message"])
           setError("message", { message: error["message"] });
       } else {
-        try {
-          await sendEmail({
-            from: valid.data.email,
-            subject: `New Project request from ${valid.data.name}`,
-            html: valid.data.message,
-          });
-          handleTrigger();
-        } catch (err) {
-          console.error("Error while sending email", err);
-        }
+        const response = await fetch("api/send-mail", {
+          method: "POST",
+          body: JSON.stringify(valid.data),
+        });
+        if (response.status === 200) handleTrigger();
         reset();
       }
       buttonRef.current?.blur();

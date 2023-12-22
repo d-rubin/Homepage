@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+"use strict";
 
 type EmailPayload = {
   from: string;
@@ -6,19 +6,17 @@ type EmailPayload = {
   html: string;
 };
 
-const smtpOptions = {
-  host: process.env.SMTP_HOST || "smtp.mailtrap.io",
-  port: parseInt(process.env.SMTP_PORT || "2525"),
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER || "user",
-    pass: process.env.SMTP_PASSWORD || "password",
-  },
-};
-
 export const sendEmail = async (data: EmailPayload) => {
+  const nodemailer = require("nodemailer");
+  require("dotenv").config();
   const transporter = nodemailer.createTransport({
-    ...smtpOptions,
+    host: process.env.SMTP_HOST || "smtp.mailtrap.io",
+    port: parseInt(process.env.SMTP_PORT || "2525"),
+    secure: false,
+    auth: {
+      user: process.env.SMTP_USER || "user",
+      pass: process.env.SMTP_PASSWORD || "password",
+    },
   });
 
   return await transporter.sendMail({
