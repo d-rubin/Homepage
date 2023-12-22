@@ -10,7 +10,7 @@ const NavItem = ({ text }: { text: string }) => {
       >
         {text}
       </Link>
-      <div className="w-14 border-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
+      <div className="w-full border-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
     </span>
   );
 };

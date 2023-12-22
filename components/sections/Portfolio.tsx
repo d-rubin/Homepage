@@ -9,7 +9,7 @@ const Portfolio = () => {
       <div className="flex flex-col gap-8 items-center">
         <div className="w-full flex items-center justify-center relative">
           <div className="w-full flex items-center justify-end">
-            <div className="rounded border-t-4 border-red w-full lg:w-20" />
+            <div className="rounded border-t-4 border-red w-full" />
           </div>
           <h2 className="text-5xl font-extrabold w-fit px-8">Portfolio</h2>
           <div className="rounded w-full border-t-4 border-red" />
@@ -19,7 +19,7 @@ const Portfolio = () => {
           to try them out.
         </p>
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-8 px-4 items-center">
+      <div className="flex flex-col md:flex-row gap-8 px-4 items-center">
         <Image
           src={laptop1}
           alt="Laptop with Image of join"
@@ -35,7 +35,7 @@ const Portfolio = () => {
             Task manager inspired by the Kanban System. Create and organize
             tasks using drag and drop functions, assign users and categories.
           </p>
-          <div className="flex gap-4 justify-between sm:justify-evenly">
+          <div className="flex gap-8 justify-center">
             <LinkButton
               label="Live test"
               href="https://join.daniel-rubin.de"
@@ -51,7 +51,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-8 px-4 items-center">
+      <div className="flex flex-col-reverse md:flex-row-reverse gap-8 px-4 items-center">
         <div className="flex flex-col gap-4">
           <h3 className="text-4xl text-red font-extrabold text-center">
             Sharky
@@ -64,7 +64,7 @@ const Portfolio = () => {
             Help sharky to find coins and poison bottles to fight against the
             killer whale
           </p>
-          <div className="flex gap-4 justify-between sm:justify-evenly">
+          <div className="flex gap-8 justify-center">
             <LinkButton
               label="Live test"
               href="https://sharky.daniel-rubin.de/"

@@ -69,7 +69,7 @@ const Intro = () => {
           >
             contact@daniel-rubin.de
           </Link>
-          <div className="w-14 border-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
+          <div className="w-full border-b-2 rounded border-transparent group-hover:border-red group-focus-within:border-red transition-all" />
         </span>
         <span className="hidden absolute gap-4 items-center justify-center rotate-90 right-0 bottom-16 md:flex">
           <p className="cursor-default">Scroll down</p>

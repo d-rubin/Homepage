@@ -11,7 +11,7 @@ const AboutMe = () => {
         alt="About me background"
         className="absolute object-cover top-20 -right-40 opacity-40 sm:-right-60 sm:scale-75 sm:-top-32"
       />
-      <div className="flex pl-4 pr-4 lg:pr-0 flex-col gap-8 lg:w-1/2 cursor-default">
+      <div className="flex pl-4 pr-4 lg:pr-0 flex-col gap-8 md:w-3/4 cursor-default">
         <h2 className="text-5xl font-extrabold">About me</h2>
         <p className="text-lg">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -42,12 +42,12 @@ const AboutMe = () => {
           </p>
         </span>
       </div>
-      <div className="w-1/2 hidden lg:flex items-center justify-end pr-20">
-        <div className="relative rounded-full h-96 w-96 overflow-hidden border-4 border-orange">
-          <Image src={aboutMeImg} fill alt="About me Image" />
-        </div>
-        <span className="absolute right-0 border-t-orange border-t-4 rounded-tr rounded-br w-20" />
-      </div>
+      {/*<div className="w-1/2 hidden lg:flex items-center justify-end pr-20">*/}
+      {/*  <div className="relative rounded-full h-96 w-96 overflow-hidden border-4 border-orange">*/}
+      {/*    <Image src={aboutMeImg} fill alt="About me Image" />*/}
+      {/*  </div>*/}
+      {/*  <span className="absolute right-0 border-t-orange border-t-4 rounded-tr rounded-br w-20" />*/}
+      {/*</div>*/}
     </div>
   );
 };
