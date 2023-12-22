@@ -6,12 +6,12 @@ export async function POST(req: NextRequest) {
   let nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.mailtrap.io",
-    port: parseInt(process.env.SMTP_PORT || "2525"),
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT!) || 25,
     secure: true,
     auth: {
-      user: process.env.SMTP_USER || "user",
-      pass: process.env.SMTP_PASSWORD || "password",
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
@@ -29,10 +29,13 @@ export async function POST(req: NextRequest) {
 
     transporter.sendMail(
       mailData,
-      function (err: Error | null, info: SMTPTransport.SentMessageInfo) {
+      (err: Error | null, info: SMTPTransport.SentMessageInfo) => {
         if (err) console.log(err);
         else console.log(info);
       }
+    );
+    console.log(
+      `From: ${body.email}\nTo: ${process.env.SMTP_TO_EMAIL}\nUser: ${process.env.SMTP_USER}\nPW: ${process.env.SMTP_PASSWORD}`
     );
 
     return NextResponse.json(
