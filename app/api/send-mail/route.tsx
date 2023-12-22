@@ -22,10 +22,9 @@ export async function POST(req: NextRequest) {
     await new Promise((resolve, reject) => {
       transporter.verify((error: Error | null, success: boolean) => {
         if (error) {
-          console.log(error);
+          console.log(`Verify-error: ${error}`);
           reject(error);
         } else {
-          console.log("Server is ready to take our messages");
           resolve(success);
         }
       });
@@ -44,10 +43,9 @@ export async function POST(req: NextRequest) {
         mailData,
         (err: Error | null, info: SMTPTransport.SentMessageInfo) => {
           if (err) {
-            console.log(err);
+            console.log(`sendMail-error: ${err}`);
             reject(err);
           } else {
-            console.log(info);
             resolve(info);
           }
         }
