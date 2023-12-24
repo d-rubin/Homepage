@@ -5,17 +5,17 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   require("dotenv").config();
-  let nodemailer = require("nodemailer");
+  // let nodemailer = require("nodemailer");
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT!) || 25,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
-    },
-  });
+  // const transporter = nodemailer.createTransport({
+  //   host: process.env.SMTP_HOST,
+  //   port: parseInt(process.env.SMTP_PORT!) || 25,
+  //   secure: true,
+  //   auth: {
+  //     user: process.env.SMTP_USER,
+  //     pass: process.env.SMTP_PASSWORD,
+  //   },
+  // });
 
   try {
     const body: { name: string; email: string; message: string } =
