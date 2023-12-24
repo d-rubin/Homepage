@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     const body: { name: string; email: string; message: string } =
       await req.json();
     const data = await resend.emails.send({
-      from: "homepage@daniel-rubin.dd",
+      from: "homepage@daniel-rubin.de",
       to: process.env.SMTP_TO_EMAIL!,
       subject: `New Project request from ${body.name}`,
       html: `${body.message} FROM: ${body.email}`,
