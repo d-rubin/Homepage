@@ -2,12 +2,12 @@ import ContactForm from "@/components/forms/ContactForm";
 
 const Contact = () => {
   return (
-    <div id="contact" className="flex flex-col gap-8 px-4">
+    <div className="flex flex-col gap-8 px-4">
       <div className="w-full flex items-center justify-center relative">
         <div className="w-full flex items-center justify-end">
           <div className="rounded border-t-4 border-red w-full" />
         </div>
-        <h2 className="text-5xl font-extrabold w-fit px-8">Contact</h2>
+        <h2 id="contact" className="text-5xl font-extrabold w-fit px-8">Contact</h2>
         <div className="rounded w-full border-t-4 border-red" />
       </div>
       <div className="flex flex-col md:flex-row gap-8">

@@ -11,7 +11,7 @@ const AboutMe = () => {
         className="absolute object-cover top-20 -right-40 opacity-40 sm:-right-60 sm:scale-75 sm:-top-32"
       />
       <div className="flex pl-4 pr-4 lg:pr-0 flex-col gap-8 md:w-3/4 cursor-default">
-        <h2 className="text-5xl font-extrabold">About me</h2>
+        <h2 id="about-me" className="text-5xl font-extrabold">About me</h2>
         <p className="text-lg">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           Hi, I'm a German frontend developer with experience in developing and
@@ -33,7 +33,7 @@ const AboutMe = () => {
         </span>
         <span className="flex gap-6 items-center">
           <Icon icon="puzzle" className="fill-orange w-24 h-24 flex-grow" />
-          <p id="skills" className="text-lg flex-shrink w-fit">
+          <p className="text-lg flex-shrink w-fit">
             If you are looking for an experienced and motivated developer who
             has a knack for turning designs into code, then get in touch with me
             {/* eslint-disable-next-line react/no-unescaped-entities */}

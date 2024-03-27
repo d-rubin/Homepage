@@ -58,7 +58,6 @@ const Intro = () => {
       </div>
       <div className="w-full flex items-center justify-center relative md:justify-start">
         <div
-          id="about-me"
           className="absolute left-0 w-1/5 border-t-4 rounded border-red sm:w-48 md:w-40"
         />
         <SocialIcons className="md:ml-50" />

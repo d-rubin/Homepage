@@ -155,7 +155,7 @@ const ContactForm = () => {
               {...register("privacy")}
               checked={checked}
               type="checkbox"
-              className="h-0 w-0"
+              className="h-0 w-0 invisible"
               onKeyDown={handleKeyDown}
             />
           </span>
