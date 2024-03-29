@@ -1,6 +1,6 @@
 import Image from "next/image";
 import laptop1 from "@/public/laptop1.png";
-import laptop2 from "@/public/laptop2.png";
+// import laptop2 from "@/public/laptop2.png";
 import LinkButton from "@/components/LinkButton";
 
 const Portfolio = () => {
@@ -51,40 +51,40 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row-reverse gap-8 px-4 items-center">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-4xl text-red font-extrabold text-center">
-            Sharky
-          </h3>
-          <p className="text-2xl text-orange text-center">
-            JavaScript | OOP | HTML | CSS
-          </p>
-          <p className="text-lg text-center">
-            A simple Jump-and-Run game based on an object-oriented approach.
-            Help sharky to find coins and poison bottles to fight against the
-            killer whale
-          </p>
-          <div className="flex gap-8 justify-center">
-            <LinkButton
-              label="Live test"
-              href="https://sharky.daniel-rubin.de/"
-              target="_blank"
-              color="red"
-            />
-            <LinkButton
-              label="Github"
-              href="https://github.com/d-rubin/Sharky"
-              target="_blank"
-              variant="outline"
-            />
-          </div>
-        </div>
-        <Image
-          src={laptop2}
-          alt="Laptop with Image of sharky"
-          className="max-w-md w-full md:w-80"
-        />
-      </div>
+      {/*<div className="flex flex-col-reverse md:flex-row-reverse gap-8 px-4 items-center">*/}
+      {/*  <div className="flex flex-col gap-4">*/}
+      {/*    <h3 className="text-4xl text-red font-extrabold text-center">*/}
+      {/*      Sharky*/}
+      {/*    </h3>*/}
+      {/*    <p className="text-2xl text-orange text-center">*/}
+      {/*      JavaScript | OOP | HTML | CSS*/}
+      {/*    </p>*/}
+      {/*    <p className="text-lg text-center">*/}
+      {/*      A simple Jump-and-Run game based on an object-oriented approach.*/}
+      {/*      Help sharky to find coins and poison bottles to fight against the*/}
+      {/*      killer whale*/}
+      {/*    </p>*/}
+      {/*    <div className="flex gap-8 justify-center">*/}
+      {/*      <LinkButton*/}
+      {/*        label="Live test"*/}
+      {/*        href="https://sharky.daniel-rubin.de/"*/}
+      {/*        target="_blank"*/}
+      {/*        color="red"*/}
+      {/*      />*/}
+      {/*      <LinkButton*/}
+      {/*        label="Github"*/}
+      {/*        href="https://github.com/d-rubin/Sharky"*/}
+      {/*        target="_blank"*/}
+      {/*        variant="outline"*/}
+      {/*      />*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*  <Image*/}
+      {/*    src={laptop2}*/}
+      {/*    alt="Laptop with Image of sharky"*/}
+      {/*    className="max-w-md w-full md:w-80"*/}
+      {/*  />*/}
+      {/*</div>*/}
     </div>
   );
 };
