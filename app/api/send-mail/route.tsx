@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   require("dotenv").config();
-  let result = "";
+  let result;
 
   try {
     const transporter = nodemailer.createTransport({
