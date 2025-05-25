@@ -10,7 +10,7 @@ const Homepage = () => {
       <Intro />
       <AboutMe />
       <Skills />
-      <Portfolio />
+      {/*<Portfolio />*/}
       <Contact />
     </>
   );
